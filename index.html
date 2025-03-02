@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Profile</title>
+    <script>
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    localStorage.setItem('profilePicture', e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function handleNameSubmit() {
+            const name = document.getElementById('nameInput').value;
+            if (name.trim() !== "") {
+                localStorage.setItem('userName', name);
+                window.location.href = 'FEUP.html';
+            } else {
+                alert("Por favor, insira um nome.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Upload Profile</h2>
+    <p>Foto de Perfil (preferencialmente 160x200 px)</p>
+    <input type="file" accept="image/*" onchange="handleFileUpload(event)">
+    <br><br>
+    <p>Nome Completo:</p>
+    <input type="text" id="nameInput" placeholder="Seu nome">
+    <button onclick="handleNameSubmit()">Confirmar</button>
+</body>
+</html>
