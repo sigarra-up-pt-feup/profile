@@ -12,9 +12,8 @@ body {
 
 h2 {
     font-size: 23px;
-    margin-bottom: 20px;
-    padding: 20;
-    text-align: center;
+    margin: 20px;
+    align-items: center;
 }
 
 p {
