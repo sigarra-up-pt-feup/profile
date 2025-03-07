@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Profile</title>
+    <style>
+        #Disclaimer {
+            font-size: small;
+        }
+        #txtDisclaimer {
+            font-size: xx-small;
+        }
+    </style>
     <script>
         function handleFileUpload(event) {
             const file = event.target.files[0];
@@ -29,7 +37,7 @@
     </script>
 </head>
 <body>
-    <h2>Cria o teu Perfil Falso</h2>
+    <h2>Cria o teu Perfil Personalizado</h2>
     <br></br>
     <h2 hidden>FEUPCaffé para todos!</h2>
     
@@ -39,5 +47,12 @@
     <p>Nome Completo:</p>
     <input type="text" id="nameInput" placeholder="Seu nome">
     <button onclick="handleNameSubmit()">Confirmar</button>
+
+    <br><br><br><br><br>
+    <h3 id="Disclaimer">Disclaimer!</h3>
+    <p id="txtDisclaimer">Não incentivamos, apoiamos ou permitimos o uso deste serviço para falsificação de identidade, fraude, engano ou qualquer atividade ilícita. <br>
+        O usuário é o único responsável pelo uso das ferramentas oferecidas no site. <br>
+        Não nos responsabilizamos por qualquer dano, prejuízo ou consequência decorrente do uso indevido da plataforma.
+    </p>
 </body>
 </html>
